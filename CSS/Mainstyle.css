@@ -1,0 +1,143 @@
+body {margin:0;}
+*{
+  box-sizing: border-box;
+}
+
+.galeria {
+    position: relative;
+    flex:50%;
+}
+
+.slide {
+  display: none;
+  }
+
+.slide img {
+  width: 100%;
+  height: 450px; 
+  object-fit: cover;
+}
+
+.texto {
+    color: #f2f2f2;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    background: rgba(56, 55, 55, 0.6)
+  } 
+
+  .appear {
+    -webkit-animation-name: appear;
+    -webkit-animation-duration: 2.5s;
+    animation-name: appear;
+    animation-duration: 2.5s;
+  }
+
+  @-webkit-keyframes appear {
+    from {opacity: 0.5;} 
+    to {opacity: 1;}
+  }
+
+  @keyframes appear {
+    from {opacity: 0.5;} 
+    to {opacity: 1;}
+  }
+
+  .formcont{
+    flex:50%;
+    padding: 20px;    
+  }
+
+  .formcont form{
+    background-color:  rgba(161, 159, 159, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .formcont label {
+    color: #f2f2f2;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    width: 20%;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+   
+  }
+
+  .formcont h1{
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  input[type=text], select, textarea, input[type=email] {
+    width: 80%;
+    float: left;
+    padding: 12px; 
+    border: 3px solid  rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  input[type=submit] {
+    display: block;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    background-color: rgba(1, 2, 41, 0.7);
+    color: #f2f2f2;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type=submit]:hover {
+    text-shadow: 2px 2px 5px #77ebff;
+    border-color: rgba(153, 149, 149, 0.733);
+    font-weight: bold;
+  }
+
+
+  
+
+@media screen and (max-width: 600px) {
+  .slide img {
+    height: 225px;
+  }
+
+  .footer {
+    overflow: auto;
+    flex-direction: column;
+  
+  }
+
+ .col {
+   font-size: 10px;
+   width: 100%;
+   text-align: center;
+ }
+
+ .semicol {
+   display: block;
+   width: 100%;
+   float: none;
+ }
+
+
+  .formcont label, input[type=text], select, textarea, input[type=email] {
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,161 @@
+body {margin:0;}
+*{
+  box-sizing: border-box;
+}
+
+.sms {
+    display: block;
+}
+
+.pcs {
+  display: none;
+}
+
+.top {
+  background-color: rgb(1, 1, 71);
+  width: 100%;
+  height: auto;
+  max-height: 50px;
+  padding: 2px;
+  padding-left: 5px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1;
+  top:0;
+  opacity: 0.97;
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #f2f2f2;
+  margin: 8px 0;
+  transition: 0.5s;
+  
+}
+
+.top h1 {
+  color: #f2f2f2;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+  text-shadow: 2px 2px 5px #77ebff;
+  float: right;
+  padding-right: 200px;
+}
+
+
+
+
+.rot .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+
+.rot .bar2 {
+  opacity: 0;
+}
+
+
+.rot .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -6px) ;
+  transform: rotate(45deg) translate(-8px, -6px) ;
+}
+
+.navbars {
+  display: flex;
+  flex-direction: column;
+  width: 0; 
+  position: fixed;
+  z-index: 1;
+  top: 45px;
+  left: 0;
+  transition: 0.5s;
+  overflow: auto;
+  background-color: rgb(1, 1, 71);
+  opacity: 0.97;
+}
+
+.navbars a {
+  flex: 20%;
+  color: #f2f2f2;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.navbars a:hover {
+  text-shadow: 2px 2px 5px #77ebff;
+  font-weight: bold;
+}
+
+
+.main {
+  flex-direction: column;
+  margin-top: 47px;
+  background-color: rgb(1, 1, 71);
+  height: 100%;
+  position: relative;
+}
+
+#footer {
+  overflow: auto;
+  display: block;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  background-color:  rgb(2, 0, 14);
+  text-align: center;
+}
+
+.col {
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.semicol{
+  display: block;
+  width: 100%;
+  float: none;
+}
+
+.col img {
+  float: left;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+.col h1 {
+  display: none;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 5px #77ebff;
+}
+
+.col a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.col a:hover {
+  text-shadow: 2px 2px 5px #77ebff;
+  font-weight: bold;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 10px;}
+}
