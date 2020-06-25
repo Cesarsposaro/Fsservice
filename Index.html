@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es-la">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header>
+<meta charset="UTF-8">
+<title>Fs Service</title>
+<link rel="stylesheet" href="CSS/Menu Top.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="CSS/600pxstyle.css">
+<link rel="stylesheet" href="CSS/Mainstyle.css">
+<script type="text/javascript" src="Javascript/Scripts.js"></script>
+</header>
+<body>
+  <div class="sms">
+    <div id="menu" class="top" onclick="Desp(this)">
+      <a href="Index.html">
+          <h1>FS service</h1>
+      </a>
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div id="navbar" class="navbars">
+       <a style="cursor: pointer;text-align: right;" onclick="unDesp()">&times;</a>
+       <a href="HTML/Consultarep.html">Estado de reparación</a>
+       <a href="HTML/Galeria.html">Galería</a>
+       <a href="HTML/Utilidades.html">Utilidades</a>
+       <a href="HTML/Clientes.html">Clientes</a>
+    </div>
+  </div>
+  <div class="pcs">
+   <div class="navbar">
+        <a href="Index.html">
+          <h1 style="padding-bottom: 10px;">FS service</h1>
+        </a>
+        <a href="HTML/Consultarep.html" style="flex-shrink: 0">Estado de reparación</a>
+        <a href="HTML/Galeria.html">Galería</a>
+        <a href="HTML/Utilidades.html">Utilidades</a>
+        <a href="HTML/Clientes.html">Clientes</a>
+   </div>
+  </div>
+<div class="main">
+    <div class="galeria">
+        <div class="slide appear">
+        <img class="img" src="Imagenes/teclados.jpg">
+            <div class=texto>
+              <h2 style="text-align: right;">Teclados</h2>
+              <p>Reparamos todo tipo de teclados y sintetizadores</p>
+            </div>
+        </div>
+        <div class="slide appear">
+          <img src="Imagenes/mixer 2.jpg">
+          <div class=texto>
+            <h2 style="text-align: right;">Mixers analógicas</h2>
+            <p>Reparamos mixers de mezcla y potenciadas de todas las marcas y tamaños</p>
+          </div>
+        </div>
+        <div class="slide appear">
+          <img src="Imagenes/piano.jpg">
+          <div class=texto>
+            <h2 style="text-align: right;">Pianos Digitales</h2>
+            <p>Reparamos pianos digitales de todas las marcas</p>
+          </div>
+        </div>
+        <div class="slide appear">
+          <img src="Imagenes/tube.jpg">
+          <div class=texto>
+            <h2 style="text-align: right;">Amplificadores</h2>
+            <p>Reparamos amplificadores valvulares y de estado sólido</p>
+          </div>
+        </div>
+        <div class="slide appear">
+          <img src="Imagenes/studio.jpg">
+          <div class=texto>
+            <h2 style="text-align: right;">Equipamiento de estudio</h2>
+            <p>Reparamos todo tipo de equipamiento de estudio y micrófonos</p>
+          </div>
+        </div>
+        <div class="slide appear">
+          <img src="Imagenes/pa.jpg">
+          <div class=texto>
+            <h2 style="text-align: right;">Equipamiento de PA y monitoreo</h2>
+            <p>Reparamos line array, subs, parlantes potenciados y potencias</p>
+          </div>
+        </div>
+    </div>
+    <div class="formcont">
+      <form action="">
+        <h1>Envianos tu consulta</h1>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+        <label for="equipo">Equipo</label>
+        <input type="text" id="equipo" name="equipo" placeholder="Marca modelo y/o descripción">
+        <label for="falla">Falla declarada</label>
+        <textarea id="falla" name="falla" placeholder="Escriba una breve descripción de la falla" style="height:200px"></textarea>
+        <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="mail" placeholder="ingrese su correo electrónico">    
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+</div>
+<footer id="footer" class="footer">
+  <div class="col" style="flex-shrink: 0;"> 
+    <div class="semicol">
+     <a target="_blank" href="https://www.google.com.ar/maps/dir//Cervantes+2755,+C1417+CABA/@-34.6156136,-58.5193687,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x95bcb7d6333c72cf:0xc41ee18f6233525f!2m2!1d-58.51718!2d-34.6156136!3e0">
+      <p>
+      Cervantes 2755 N°3 | Villa Devoto | CABA
+      <img src="Imagenes/Map.png">
+      </p>
+     </a>
+     <p>
+     15-5955-1125
+     <img src="Imagenes/whatsapp.png">
+     </p>
+    </div>
+    <div class="semicol">
+     <a target="blank" href="https://www.instagram.com/f.sservice/?hl=es-la">
+      <p>
+      @F.sservice
+      <img src="Imagenes/insta.png"> 
+      </p>
+     </a>
+     <a target="blank" href="https://www.instagram.com/f.sservice/?hl=es-la">
+      <p>
+      consultas.fsservice@gmail.com
+      <img src="Imagenes/Gmail.png"> 
+      </p>
+     </a>      
+    </div> 
+  </div>
+  <div class="col">
+  <div class="semicol">
+   <h1 style="margin-left: 60%;">FS Service</h1>
+  </div>
+  <div class="semicol">
+   <p id="fecha" style="margin-left: 50px;margin-top: 25px;"></p>
+  </div>
+</footer>
+<script>
+var fecha = new Date()
+var slideIndex = 0;
+showSlides();
+document.getElementById("fecha").innerHTML = "©" + " " + fecha.getDate() + " / " + (fecha.getMonth() + 1) + " / " + fecha.getFullYear() + " " + "desarrollado por Cesar Sposaro";
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 6000);
+  }
+</script>
+</body>
+</html>
